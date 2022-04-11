@@ -1,0 +1,932 @@
+{
+	"info": {
+		"_postman_id": "75e2d32f-1127-4036-bb30-7f9b54f9fa2b",
+		"name": "Workflow Manager API Test Suite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Endpoint",
+			"item": [
+				{
+					"name": "GET Requests",
+					"item": [
+						{
+							"name": "GET - Admin Config",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/endpoint",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"endpoint"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Flow Type",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"string\",\r\n  \"flowType\": \"string\",\r\n  \"description\": \"string\",\r\n  \"stages\": [\r\n    {\r\n      \"name\": \"string\"\r\n    }\r\n  ]\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/flow",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"flow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Partner Acquirer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/partner-acquirer",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"partner-acquirer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Mapping",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/mapping",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"mapping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Public Key",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/credentials/public-key",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"credentials",
+										"public-key"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Context",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"string\",\r\n  \"request\": {\r\n    \"source\": \"string\",\r\n    \"creationDateTime\": 0,\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"flowType\": \"string\",\r\n    \"originalRequest\": \"string\"\r\n  },\r\n  \"flowConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"flowType\": \"string\",\r\n    \"description\": \"string\",\r\n    \"stages\": [\r\n      {\r\n        \"name\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"endpointConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"config\": \"string\"\r\n  },\r\n  \"partnerAcquirerConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"config\": \"string\"\r\n  },\r\n  \"mappingConfigurations\": [\r\n    {\r\n      \"mappingName\": \"string\",\r\n      \"partnerId\": \"string\",\r\n      \"config\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"RECEIVED\",\r\n  \"lastUpdatedDateTime\": 0,\r\n  \"currentStage\": \"active\",\r\n  \"currentHandler\": \"string\",\r\n  \"workHistory\": [\r\n    {\r\n      \"timestamp\": 0,\r\n      \"stage\": \"string\",\r\n      \"handler\": \"string\",\r\n      \"executedStatus\": \"success\",\r\n      \"errorMessage\": \"string\",\r\n      \"handlerData\": \"string\"\r\n    }\r\n  ],\r\n  \"logger\": {}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/context/",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"context",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Contexts",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"string\",\r\n  \"request\": {\r\n    \"source\": \"string\",\r\n    \"creationDateTime\": 0,\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"flowType\": \"string\",\r\n    \"originalRequest\": \"string\"\r\n  },\r\n  \"flowConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"flowType\": \"string\",\r\n    \"description\": \"string\",\r\n    \"stages\": [\r\n      {\r\n        \"name\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"endpointConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"config\": \"string\"\r\n  },\r\n  \"partnerAcquirerConfiguration\": {\r\n    \"partnerId\": \"string\",\r\n    \"merchantAcquirerId\": \"string\",\r\n    \"config\": \"string\"\r\n  },\r\n  \"mappingConfigurations\": [\r\n    {\r\n      \"mappingName\": \"string\",\r\n      \"partnerId\": \"string\",\r\n      \"config\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"RECEIVED\",\r\n  \"lastUpdatedDateTime\": 0,\r\n  \"currentStage\": \"active\",\r\n  \"currentHandler\": \"string\",\r\n  \"workHistory\": [\r\n    {\r\n      \"timestamp\": 0,\r\n      \"stage\": \"string\",\r\n      \"handler\": \"string\",\r\n      \"executedStatus\": \"success\",\r\n      \"errorMessage\": \"string\",\r\n      \"handlerData\": \"string\"\r\n    }\r\n  ],\r\n  \"logger\": {}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/contexts/{partnerId}/{flowType}/{entityType}/{entityReferenceId}",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"contexts",
+										"{partnerId}",
+										"{flowType}",
+										"{entityType}",
+										"{entityReferenceId}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET - Environment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/environment",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"environment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST Requests",
+					"item": [
+						{
+							"name": "POST - Endpoint",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"aaa\",\r\n  \"merchantAcquirerId\": \"XYZ\",\r\n  \"config\":[\r\n    {\r\n      \"name\": \"cloudflow\",\r\n      \"baseUrl\": \"https://cloudflow-dev.aevi-test.io/v1\",\r\n      \"credentialsSecretId\": \"mock-credentials\"\r\n       \r\n    }\r\n   \r\n    ],\r\n    \"minWfmVersion\": \"1.0\"\r\n     \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/endpoint",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"endpoint"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Flow",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\" Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"1234\",\r\n  \"flowType\": \"onboard\",\r\n  \"description\": \"tenant\",\r\n  \"stages\": [\r\n    {\r\n      \"name\": \"abc\"\r\n    }\r\n  ],\r\n  \"minWfmVersion\":\"1.1\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/flow",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"flow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Partner Acquirer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\",\r\n  \"minWfmVersion\":[\"1.1\"]\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1//admin/configurations/partner-acquirer",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"",
+										"admin",
+										"configurations",
+										"partner-acquirer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Mapping",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/configurations/mapping",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"configurations",
+										"mapping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST - Credentials",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Verify Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"partnerId\": \"wer\",\r\n  \"merchantAcquirerId\": \"1234\",\r\n  \"config\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/admin/credentials",
+									"protocol": "https",
+									"host": [
+										"connect-workflow-qa-eu",
+										"aevi-test",
+										"com"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"credentials"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Workflow Endpoint",
+			"item": [
+				{
+					"name": "Workflow - Initiate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"partnerId\": \"chase\",\r\n  \"merchantAcquirerId\": \"112233\",\r\n  \"type\": \"onboard\",\r\n  \"format\": \"apa\",\r\n  \"contextData\": {\r\n    \"id\": \"BT001\",  \r\n    \"name\": \"Bobs Stuff and Things\",\r\n    \"status\": \"active\",                     \r\n    \"physicalLocations\": [\r\n      {\r\n        \"id\": \"BT000001\",                                              \r\n        \"name\": \"Bobs Cafe\",                                            \r\n        \"status\": \"active\",\r\n        \"defaultLanguage\": \"en\",\r\n        \"timezone\": \"US/Pacific\",         \r\n        \"address\": {\r\n          \"address1\": \"The High Street\",\r\n          \"address2\": \"Downtown\",\r\n          \"city\": \"Bobsville\",\r\n          \"county\": \"Durham\",\r\n          \"country\": \"US\",\r\n          \"postalCode\": \"12345\",\r\n          \"contacts\": [\r\n            {\r\n              \"type\": \"telephone\",\r\n              \"description\": \"office phone\",\r\n              \"value\": \"12662666626\"\r\n            },\r\n            {\r\n              \"type\": \"email\",\r\n              \"description\": \"office email\",\r\n              \"value\": \"blah@blah.com\"\r\n            },\r\n            {\r\n              \"type\": \"firstname\",\r\n              \"description\": \"name\", \r\n              \"value\": \"Jack\"\r\n            },\r\n            {\r\n              \"type\": \"lastname\",\r\n              \"description\": \"surname\",     \r\n              \"value\": \"Jones\"\r\n            }\r\n          ]\r\n        },\r\n        \"receiptParameters\": {\r\n            \"merchantDisplayName\": \"Bobs\",\r\n            \"merchantLogo\": \"pic.jpg\",\r\n            \"headerLines\": [\r\n                \"A header line 1\",\r\n                \"Another header line 2\"\r\n            ],\r\n            \"footerLines\": [\r\n                \"A footer line 1\",\r\n                \"Another footer line 2\"\r\n            ]\r\n        },\r\n        \"parameters\": {\r\n            \"cloudFlowClientAccountId\": \"123456789123456789\",\r\n            \"cloudFlowClientApiToken\": \"44444444-33333333-22222222-11111111\"\r\n        },\r\n        \"terminals\": [\r\n          {\r\n            \"id\": \"BT00000101\",\r\n            \"name\": \"Front Desk\",\r\n            \"serialNumber\": \"164612FA10\",\r\n            \"model\": \"xac_at170r\",\r\n            \"status\": \"active\",\r\n            \"country\": \"US\",\r\n            \"defaultLanguage\": \"en\",\r\n            \"timezone\": \"US/Pacific\",\r\n            \"profile\": \"retail_a\",\r\n            \"defaultCurrency\": \"USD\",       \r\n             \r\n            \"supportedLanguages\": [        \r\n              \"en\",\r\n              \"es\"\r\n            ],\r\n            \"parameters\": {\r\n              \"hostTerminalId\": \"8282828\",\r\n              \"hostDeviceId\": \"2828288282\",\r\n              \"hostMerchantId\": \"281991919\",\r\n              \"acquirerId\": \"006\",\r\n              \"merchantCategoryCode\": \"5913\",\r\n              \"cloudFlowEnabled\": \"true\",\r\n              \"cloudFlowDeviceApiToken\": \"11111111-22222222-33333333-44444444\",\r\n              \"tipMode\": \"tip_on_terminal\",\r\n              \"tipDisplayType\": \"percentage\",\r\n              \"tipAmountGuideLow\": \"10\",\r\n              \"tipAmountGuideMedium\": \"20\",\r\n              \"tipAmountGuideHigh\": \"30\",\r\n              \"cashbackEnabled\": \"true\",\r\n              \"deferredAuthorisationEnabled\": \"true\",\r\n              \"internationalDeferredTransaction\": \"true\",\r\n              \"maximumTotalNumberOfDeferredTransactions\": \"10\",\r\n              \"maximumAmountOfDeferredTransaction\": \"50000\",\r\n              \"tvrMaskDeferredTransactions\": \"XXXXXXXXXX\",\r\n              \"tsiMaskDeferredTransactions\": \"XXXX\",\r\n              \"deferredTransactionCardEntryMgodes\":  \"555555\",\r\n              \"supportedCardBrands\":    \"visa\",\r\n             \"signatureVerification\": \"true\",\r\n              \"partialAuthorisation\": \"true\",\r\n              \"cvdPromptEnabled\": \"true\",\r\n              \"avsPromptEnabled\": \"true\",\r\n              \"promptforDebit\": \"true\",\r\n              \"referenceId\": \"Bobs Cafe Terminal 1\",    \r\n                            \"simCardId\": \"88388383\", \r\n              \"contactlessActive\": \"true\",           \r\n              \"contactlessAIDPreference\": \"emv_default\",\r\n              \"contactAIDPreference\": \"emv_default\",    \r\n              \"quickChipEnabled\": \"true\",               \r\n              \"amexSellerId\": \"288282\",                 \r\n              \"amexServiceEstablishmentNumber\": \"11112222bbbb33334444\",              \r\n              \"cashbackMinimumPurchaseAmount\": \"1000\",                   \r\n              \"cashbackMinimumAmount\": \"2000\",                           \r\n              \"cashbackMaximumAmount\": \"10000\",                          \r\n              \"autoCloseBatchTime\": \"02:00\",                             \r\n              \"maintenanceWindowStart\": \"20\",                            \r\n              \"maintenanceWindowPeriod\": \"2\",                             \r\n              \"tipMaximumPercentage\": \"15\",\r\n              \"tipMaximumAmount\": \"99999999999\",         \r\n              \"tipAmountFrom\": \"0\",                                                         \r\n              \"tipAmountTo\": \"99999999999\",              \r\n              \"saleMaximumAmount\": \"99999999999\",        \r\n              \"preAuthorisationMaximumAmount\": \"0\",      \r\n              \"refundMaximumAmount\": \"0\",                \r\n              \"paymentProcessors\": [{\r\n                    \"processorName\": \"amex\",\r\n                    \"processorTerminalIds\": [\"464646464\"],\r\n                    \"cardAcceptorId\": \"111737322\",\r\n                    \"merchantCategoryCode\": \"5999\"\r\n                }]\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n  }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/initiate",
+							"protocol": "https",
+							"host": [
+								"connect-workflow-qa-eu",
+								"aevi-test",
+								"com"
+							],
+							"path": [
+								"v1",
+								"initiate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workflow - Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"partnerId\": \"string\",\r\n  \"merchantAcquirerId\": \"string\",\r\n  \"type\": \"onboard\",\r\n  \"format\": \"aevi\",\r\n  \"contextData\": {\r\n    \"id\": \"string\",\r\n    \"name\": \"string\",\r\n    \"address\": {\r\n      \"address1\": \"string\",\r\n      \"address2\": \"string\",\r\n      \"city\": \"string\",\r\n      \"county\": \"string\",\r\n      \"postalCode\": \"string\",\r\n      \"country\": \"string\",\r\n      \"contacts\": [\r\n        {\r\n          \"type\": \"firstname\",\r\n          \"description\": \"string\",\r\n          \"value\": \"string\"\r\n        }\r\n      ]\r\n    },\r\n    \"status\": \"active\",\r\n    \"physicalLocations\": [\r\n      {\r\n        \"id\": \"string\",\r\n        \"name\": \"string\",\r\n        \"address\": {\r\n          \"address1\": \"string\",\r\n          \"address2\": \"string\",\r\n          \"city\": \"string\",\r\n          \"county\": \"string\",\r\n          \"postalCode\": \"string\",\r\n          \"country\": \"string\",\r\n          \"contacts\": [\r\n            {\r\n              \"type\": \"firstname\",\r\n              \"description\": \"string\",\r\n              \"value\": \"string\"\r\n            }\r\n          ]\r\n        },\r\n        \"status\": \"active\",\r\n        \"parameters\": {\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"receiptParameters\": {\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"terminals\": [\r\n          {\r\n            \"id\": \"string\",\r\n            \"name\": \"string\",\r\n            \"serialNumber\": \"string\",\r\n            \"model\": \"string\",\r\n            \"status\": \"active\",\r\n            \"country\": \"string\",\r\n            \"supportedLanguages\": [\r\n              \"string\"\r\n            ],\r\n            \"defaultLanguage\": \"string\",\r\n            \"supportedCurrencies\": [\r\n              \"string\"\r\n            ],\r\n            \"defaultCurrency\": \"string\",\r\n            \"timezone\": \"string\",\r\n            \"profile\": \"string\",\r\n            \"parameters\": {\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"parameters\": {\r\n      \"additionalProp1\": \"string\",\r\n      \"additionalProp2\": \"string\",\r\n      \"additionalProp3\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/status/632629c0-c834-4ca1-9d2d-94e354c073a9",
+							"protocol": "https",
+							"host": [
+								"connect-workflow-qa-eu",
+								"aevi-test",
+								"com"
+							],
+							"path": [
+								"v1",
+								"status",
+								"632629c0-c834-4ca1-9d2d-94e354c073a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workflow - Status Workflow ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhY2NvdW50SWQiOiJkZXYtYWRtaW4iLCJhcGlUb2tlbiI6IlFzOWwrUlJnbEcwNFB0aGJkNGZuVU5QVmZpcmhrVVduVjJaNUt2U1diVWw3SjRMdC9xTDhEQ2E1WlhRR2luUi8ifQ==",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"partnerId\": \"string\",\r\n  \"merchantAcquirerId\": \"string\",\r\n  \"type\": \"onboard\",\r\n  \"format\": \"aevi\",\r\n  \"contextData\": {\r\n    \"id\": \"string\",\r\n    \"name\": \"string\",\r\n    \"address\": {\r\n      \"address1\": \"string\",\r\n      \"address2\": \"string\",\r\n      \"city\": \"string\",\r\n      \"county\": \"string\",\r\n      \"postalCode\": \"string\",\r\n      \"country\": \"string\",\r\n      \"contacts\": [\r\n        {\r\n          \"type\": \"firstname\",\r\n          \"description\": \"string\",\r\n          \"value\": \"string\"\r\n        }\r\n      ]\r\n    },\r\n    \"status\": \"active\",\r\n    \"physicalLocations\": [\r\n      {\r\n        \"id\": \"string\",\r\n        \"name\": \"string\",\r\n        \"address\": {\r\n          \"address1\": \"string\",\r\n          \"address2\": \"string\",\r\n          \"city\": \"string\",\r\n          \"county\": \"string\",\r\n          \"postalCode\": \"string\",\r\n          \"country\": \"string\",\r\n          \"contacts\": [\r\n            {\r\n              \"type\": \"firstname\",\r\n              \"description\": \"string\",\r\n              \"value\": \"string\"\r\n            }\r\n          ]\r\n        },\r\n        \"status\": \"active\",\r\n        \"parameters\": {\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"receiptParameters\": {\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"terminals\": [\r\n          {\r\n            \"id\": \"string\",\r\n            \"name\": \"string\",\r\n            \"serialNumber\": \"string\",\r\n            \"model\": \"string\",\r\n            \"status\": \"active\",\r\n            \"country\": \"string\",\r\n            \"supportedLanguages\": [\r\n              \"string\"\r\n            ],\r\n            \"defaultLanguage\": \"string\",\r\n            \"supportedCurrencies\": [\r\n              \"string\"\r\n            ],\r\n            \"defaultCurrency\": \"string\",\r\n            \"timezone\": \"string\",\r\n            \"profile\": \"string\",\r\n            \"parameters\": {\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"parameters\": {\r\n      \"additionalProp1\": \"string\",\r\n      \"additionalProp2\": \"string\",\r\n      \"additionalProp3\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://connect-workflow-qa-eu.aevi-test.com/v1/status/632629c0-c834-4ca1-9d2d-94e354c073a9",
+							"protocol": "https",
+							"host": [
+								"connect-workflow-qa-eu",
+								"aevi-test",
+								"com"
+							],
+							"path": [
+								"v1",
+								"status",
+								"632629c0-c834-4ca1-9d2d-94e354c073a9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
